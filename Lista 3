@@ -1,1 +1,142 @@
+1) O que é uma regra CSS?, propriedade? qual a sintaxe de um arquivo CSS? E como podemos incorporar
+CSS aos nossos documentos HTML. 
+R: É um conjunto de parâmetros e definições que formam a estilização de elementos em uma página HTML. 
+Já uma propriedade CSS é um atributo específico que define a stilização de um elemento HTML (ex: color, font-sie, etc.).
+Por outro lado, a sintaxe de um arquilo CSS é a seguinte:
+seletor {
+    propriedade: valor;
+}
+sendo o seletor o identificador de a quais elementos da página a regra se aplica e o valor sendo correspndente a propriedade indicada.
+Por fim, as formas de incorporar CSS ao documento HTML são:
+Inline: a estilização é realizada dentro da tag da linha com o parâmetro "style".
+No cabeçalho: é declarado um bloco <style> na tag <head> e dentro dele são definidas as rgras CSS.
+Arquivo externo: é criado um arquivo "styles.class" no qual são declaradas as regras CSS para o documento HTML.
 
+2) Em que pontos do código podemos definir uma regra css? Como isso impacta a definição das
+propriedades?. Apresente exemplos de uso e explique. 
+R: Podemos definir uma regra css na linha, no próprio elemento, no cabeçalho da ágina e em um arquivo externo. 
+Dependendo do local as regras devem ser definidas com estruturas diferentes. 
+Ex: 
+No cabeaçlho:
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exemplo de CSS Interno</title>
+    <style>
+        h1 {
+            color: green;
+        }
+        p {
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Oi prof</h1>
+    <p>Texto com fonte 14</p>
+</body>
+
+In line: 
+<p style="color: green; font-size: 14px;">Texto com cor verde e fonte 14</p>
+Documento externo:
+h1 {
+    color: green;
+}
+p {
+    font-size: 14px;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <h1>Oi prof</h1>
+    <p>Texto fonte 14</p>
+</body>
+</html>
+
+3) Explique as vantagens de manter a estilização em uma linguagem que não HTML.
+R: Existem diversas vantagens em manter a estilização em uma linguagem separada da HTML, como o CSS, sendo algumas delas a maior organização de código e uma melhor manutenção dele.
+Além disso, outra vantagem é a reutilizaão de código, podendo as regras serem utilizadas em vários arquivos HTML, evitando portanto a redundância de código.
+
+4) Sobre seletores CSS, como uma regra CSS pode ser associada a elementos HTML? Explique com
+exemplo e completude. 
+R: As regras podem ser associadas aos elementos HTML por meio de seetores, os quais indicam os elementos aos quais a regra CSS descrita deve ser aplicada.
+Ex: 
+h1 {
+    color: blue;
+}
+ O seletor "h1" indica que a regra deve ser aplicadas em todos os elementos h1 do documento HTML.
+
+5) Enumere ao menos 20 propriedades CSS e crie um pequeno exemplo com elas
+R: color, font-size, background-color, margin, padding, border, text-align, font-weight, display, width, height, float, position, text-decoration, border-radius, box-shadow,  background-image, line-heigt, opacity, transform. 
+
+Ex:
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <h1>Regras CSS com 20 propriedas diferentes</h1>
+    <p>blbalbalbalbala <a href="#">link</a>.</p>
+    <div class="box">div com uma classe</div>
+    <img src="image.jpg" alt="Imagem" />
+</body>
+</html>
+
+/* styles.css */
+body {
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: blue;
+    font-size: 36px;
+    text-align: center;
+    font-weight: bold;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+a {
+    color: #007bff;
+    text-decoration: underline;
+}
+
+.box {
+    width: 200px;
+    height: 100px;
+    background-color: #ccc;
+    margin: 20px auto;
+    padding: 10px;
+    border: 1px solid #999;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    opacity: 0.8;
+}
+
+img {
+    width: 300px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border: 1px solid #ddd;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transform: rotate(15deg);
+}
+
+9) Explique o que é a propriedade display e as opções inline, block e inline-block.
+R: A propriedade display define a disposição dos elementos na página web afetando seu posicionamento no layout.
+A opção inline agrupa os elementos um ao lado do outro dentro de uma linha pois eles não causam quebra de linha.
+Já a opção block dispõe os elementos um abaixo do outro pois eles ocupam toda a largura da página e causam quebra de linha. 
+Por fim, a opção inline-block permite os elementos terem propriedades de blloco mas os mantém em linha comos demais elementos.
