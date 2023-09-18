@@ -1,1 +1,12 @@
-
+1) Construa o layout abaixo com flex. 
+2) Construa a bandeira dos seguintes países com flexbox
+  a) Japão
+  b) Holanda,
+  c) Italia
+3) Crie 5 div com imagens de fundo posicionadas em um fluxo horizontal, distribuindo o espaço que sobra
+igualmente entre as divs. No momento em que o usuário passar o mouse sobre uma div destine
+majoritariamente o espaço para o elemento.
+4) Crie um layout com a seguinte estrutura utilizando GridLayout
+5) Crie um site com header, aside, main, menu e footer utilizando gridlayout e flex onde considerar
+aproprieado
+6) Construa o layout da aplicação abaixo utilizando gridlayout preferencialmente. 
