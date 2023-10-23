@@ -39,4 +39,329 @@ Exercício 1:
 </html>
 
 Exercício 2:
+Estilo embutido:
+Nesse caso, você define as regras de estilo diretamente no atributo style de uma tag HTML. Isso afeta apenas o elemento específico em que o estilo é definido. Qualquer propriedade definida dessa maneira sobrescreverá outras definições de estilo.
 
+Estilo interno:
+Nesse método, você define um bloco de estilo dentro da tag <style> no <head> do documento HTML. Isso afeta todos os elementos que correspondem aos seletores definidos no bloco de estilo
+
+Estilo externo:
+Com essa abordagem, você cria um arquivo CSS separado que contém todas as regras de estilo. Em seguida, você vincula esse arquivo ao seu documento HTML usando a tag <link>. Isso permite que você aplique as mesmas regras de estilo em várias páginas.
+
+==================================================================================
+
+Impacto nas propriedades:
+O local onde você define suas regras CSS afeta como as propriedades são aplicadas. Se você definir regras mais específicas (como usando classes ou IDs), elas terão prioridade sobre regras mais genéricas. Além disso, a ordem das regras importa, pois regras posteriores podem sobrescrever regras anteriores para os mesmos elementos.
+
+<p class="destaque">Este é um parágrafo com estilo.</p>
+
+/* estilos.css */
+p {
+    color: blue;
+}
+
+.destaque {
+    color: red;
+    font-weight: bold;
+}
+
+Nesse caso, a classe .destaque tem uma prioridade maior do que a regra genérica p, então o texto será exibido em vermelho e em negrito.
+
+Exercício 3:
+1. Separação de preocupações (Separation of Concerns)
+2. Facilita a Manutenção
+3. Reutilização de Estilos
+4. Aumenta a Eficiência
+5. Flexibilidade
+6. Compatibilidade com Múltiplos Dispositivos
+7. Colaboração Mais Eficaz
+8. Legibilidade e Organização
+
+Exercício 4:
+Seletores de Tipo:
+Um seletor de tipo corresponde a todos os elementos de um determinado tipo (tag HTML).
+p {
+    color: blue;
+}
+
+Seletores de Classe:
+Um seletor de classe é precedido por um ponto (.) e corresponde a elementos que possuem o valor do atributo class correspondente.
+.destaque {
+    font-weight: bold;
+}
+
+Seletores de ID:
+Um seletor de ID é precedido por uma hashtag (#) e corresponde a um único elemento com um valor de atributo id correspondente.
+#cabecalho {
+    background-color: gray;
+}
+
+Seletores de Descendência:
+Um seletor de descendência corresponde a um elemento específico que é um descendente de outro elemento.
+div p {
+    color: green;
+}
+
+Seletores de Filho Direto
+Um seletor de filho direto é semelhante ao seletor de descendência, mas só seleciona elementos que são filhos diretos de outro elemento.
+ul > li {
+    list-style: square;
+}
+
+Seletores de Atributo:
+Um seletor de atributo corresponde a elementos com um atributo específico e, possivelmente, um valor específico.
+input[type="text"] {
+    border: 1px solid gray;
+}
+
+Exercício 5:
+1 color:
+Define a cor do texto.
+
+2 font-size:
+Define o tamanho da fonte.
+
+3 font-size:
+Define o tamanho da fonte.
+
+4 margin:
+Define as margens ao redor de um elemento.
+
+5 padding:
+Define o preenchimento interno de um elemento
+
+6 border:
+Define as bordas de um elemento.
+
+7 width:
+Define a largura de um elemento.
+
+8 height:
+Define a altura de um elemento.
+
+9 text-align:
+Define o alinhamento do texto dentro de um elemento.
+
+10 display:
+Define como um elemento é exibido (bloco, inline, etc.).
+
+11 float:
+Define como um elemento deve flutuar à esquerda, à direita ou nã
+
+12 font-family:
+Define a família de fontes a ser usada para o texto.
+
+13 text-decoration:
+Define a decoração do texto (sublinhado, tachado, etc.).
+
+14 border-radius:
+Define o raio dos cantos de um elemento com borda.
+
+15 box-shadow:
+Adiciona uma sombra ao redor de um elemento.
+
+16 line-height:
+Define o espaçamento entre linhas de texto.
+
+17 background-image:
+Define uma imagem de fundo para um elemento.
+
+18 opacity:
+Define a opacidade de um elemento (transparência).
+
+19 transition:
+Define uma transição suave entre diferentes estados.
+
+20 text-transform:
+Define a transformação do texto (maiúsculas, minúsculas, etc.).
+
+Exercício 6:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        div {
+            height: 5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #div1 {
+            background-color: rgb(89, 0, 255);
+        }
+        #div2 {
+            background-color: rgb(0, 255, 13);
+        }
+        #div3 {
+            background-color: rgb(255, 0, 0);
+        }
+        #div4 {
+            background-color: rgb(255, 255, 0);
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">1</div>
+    <div id="div2">2</div>
+    <div id="div3">3</div>
+    <div id="div4">4</div>
+</body>
+</html>
+
+Exercício 7:
+display: flex;
+justify-content: center;
+align-items: center;
+
+
+Exercício 8:
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            display: inline-block;
+            width: 25%;
+            height: 15rem;
+            text-align: center;
+            vertical-align: middle;
+            line-height: 15rem;
+        }
+
+        #div1 {
+            background-color: rgb(89, 0, 255);
+        }
+
+        #div2 {
+            background-color: rgb(0, 255, 13);
+        }
+
+        #div3 {
+            background-color: rgb(255, 0, 0);
+        }
+
+        #div4 {
+            background-color: rgb(255, 255, 0);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="div1">1</div><div id="div2">2</div><div id="div3">3</div><div id="div4">4</div>
+
+</body>
+
+</html>
+
+Exercício 9:
+display: inline;
+Quando um elemento tem a propriedade display definida como inline, ele é renderizado como um elemento de linha, ocupando apenas o espaço necessário para o conteúdo dentro dele. Ele não cria uma nova linha e geralmente não responde a propriedades de tamanho, como width e height.
+
+display: block;
+Quando um elemento tem a propriedade display definida como block, ele é renderizado como um elemento de bloco, ocupando toda a largura disponível do seu contêiner. Ele cria uma nova linha antes e depois dele, empurrando os elementos vizinhos para a linha seguinte.
+
+display: inline-block;
+A propriedade display: inline-block combina as características de elementos inline e de bloco. Ele ocupa apenas o espaço necessário ao redor do conteúdo, como um elemento inline, mas permite que você defina largura, altura e outros estilos de um elemento de bloco.
+
+Exercício 10: 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            background: rgb(192, 212, 255);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            margin: auto;
+            width: 75%;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        .btnNavbar {
+            background-color: #ffffff;
+            color: rgb(94, 94, 94);
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.658);
+            /* Box shadow adicionada */
+        }
+
+        #titulo {
+            color: rgb(0, 102, 109);
+        }
+
+        #subtitulo {
+            margin-top: 2%;
+            color: rgb(223, 108, 0);
+        }
+
+        img {
+            width: 50%;
+            border-radius: 10px;
+            margin-top: 5%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        p {
+            margin-top: 2%;
+            text-align: justify;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="navbar">
+            <button class="btnNavbar">Home</button>
+            <button class="btnNavbar">Turismo</button>
+            <button class="btnNavbar">Educação</button>
+            <button class="btnNavbar">Esporte</button>
+            <button class="btnNavbar">Saúde</button>
+        </div>
+        <h1 id="titulo">Gaspar, Santa Catarina</h1>
+        <h2 id="subtitulo">Cidade SC - Santa Catarina</h2>
+        <img src="https://www.gaspar.sc.gov.br/uploads/sites/421/2021/12/3183288-scaled.jpg" alt="">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione officia beatae reprehenderit minus omnis
+            iste accusamus alias magni aliquid exercitationem mollitia error, id fugiat sapiente voluptas ab et, vitae
+            quod. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi expedita doloribus dolorem ipsam
+            itaque modi cumque deleniti. Rerum explicabo deleniti aperiam animi fugiat harum quam reiciendis, ullam, aut
+            perferendis nostrum. 
+        </p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias dolores dignissimos corrupti reiciendis labore?</p>
+    </div>
+</body>
+
+</html>
