@@ -4,11 +4,11 @@
         $senha=$_GET["senha"];//acessou o banco
         if($login=="admin" && $senha=="1234"){
             session_start();
-            $_SESSION["dado"]=$_GET['dado'];
+            $_SESSION["cod_usr"]="admin";
             header("Location:home.php");
         }
     }else{
-        echo "Informe login e senha"
+        echo "Informe login e senha";
     }
 
 ?>

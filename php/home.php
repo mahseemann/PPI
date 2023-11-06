@@ -1,3 +1,5 @@
+<?php
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,6 +13,11 @@
     <?php
     session_start();
     echo $_SESSION['dado'];
+    session_destroy();
+    header("Location: login.php"); 
     ?>
+
+    <a href = "logout.php">Sair</a>
+    
 </body>
 </html>
